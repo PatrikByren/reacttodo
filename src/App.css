@@ -1,38 +1,151 @@
-.App {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap');
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  margin: 0.2rem;
+  cursor: pointer;
+  width: 100%;
+}
+.filter-input {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+.container {
+  max-width: 500px;
+  margin: 30px auto;
+  overflow: auto;
+  min-height: 300px;
+  border: 1px solid steelblue;
+  padding: 30px;
+  border-radius: 5px;
+}
+
+header {
+  margin-left: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  display: inline-block;
+  background: #000;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 15px;
+  font-family: inherit;
+}
+.btn:hover{
+  background: #fff;
+  color: black;
+}
+.btn-block:hover{
+  background: #f4f4f4;
+  color: black;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.fa-plus-square{
+  font-size: 1.2rem;
+}
+.fa {
+  background: black;
+}
+.btn-block {
+  display: block;
+  width: 100%;
+}
+
+.task {
+  background: #f4f4f4;
+  margin: 5px;
+  padding: 10px 20px;
+}
+.todo-list {
+  list-style: none;
+}
+.form-control h4,
+.form-control select{
+  margin-left: 5px;
+}
+.form-control {
+  margin: 20px 0;
+}
+
+.form-control label {
+  display: block;
+}
+
+.form-control input {
+  width: 100%;
+  height: 40px;
+  margin: 5px;
+  padding: 3px 7px;
+  font-size: 17px;
+}
+
+.form-control-check {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.todo {
+  margin: 0.5rem;
+  font-size: 1rem;
+  color: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 1s ease;
+}
+.todo-task{
+  font: bolder;
+}
+.todo-duedate{
+  font-size: 0.6rem;
+}
+.todo-category{
+  font-size: 0.6rem;
+}
+.filter-container {
+  margin: 5px;
+margin-top: 3rem;
+display: flex;
+flex-direction: column;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.2;
+}
+.filter-container label {
+  margin-right: 1rem;
+  margin-left: 0.2rem;
+}
+footer {
+  margin-top: 30px;
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.filter-container button{
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
