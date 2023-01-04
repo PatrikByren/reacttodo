@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import './App.css';
 //Import components
 import Form from './componets/Form';
@@ -6,6 +6,7 @@ import TodoList from './componets/TodoList';
 import Filter from './componets/Filter';
 
 function App() {
+  const firstUpdate = useRef(true);
   const today = new Date();
   const date = today.getFullYear()+"-"+("0" + (today.getMonth()+1)).slice(-2)+"-"+("0" + today.getDate()).slice(-2);
   //let testdate= new Date();
@@ -25,6 +26,10 @@ function App() {
     //USE EFFECT
     useEffect (() => {
       filterInputHandler();
+        if (firstUpdate.current) {
+          firstUpdate.current = false;
+          return;
+        }
       saveLocalTodos();
     }, [todos]);
     useEffect (() => {

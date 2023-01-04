@@ -147,5 +147,10 @@ footer {
 .filter-container button{
   margin: 0;
 }
+.datepassed{
+  color: red;
+  margin-left: 5px;
+  font-size: 0.7rem;
+}
 
 

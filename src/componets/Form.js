@@ -36,7 +36,7 @@ const Form = ({categoryTodo,setCategoryTodo,date, inputText, setInputText, todos
         </select>
         <input value={inputText} onChange={inputTextHandler} type="text" placeholder="Add Task"/>
         <input value={inputDay} onChange={inputDayHandler} type="date"/>
-         {date > inputDay && <label color="red">Datum passerat</label>}
+         {date > inputDay && <label className="datepassed">Datum passerat</label>}
 
         <button onClick={submitTodoHandler} className="btn btn-block" 
         type="submit">New todo <i className="fas fa-plus-square"></i>
